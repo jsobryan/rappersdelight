@@ -1,0 +1,173 @@
+import random
+
+prefix = [
+    "Yung",
+    "Lil",
+    "Young",
+    "Mister",
+    "Yerng",
+    "Leel",
+    "Yawng",
+    "Masta",
+    "Uncle",
+    "Tiny",
+    "Smallish",
+    "Lil' Half",
+    "Dr.",
+    "King",
+    "Waka Flaka",
+    "Lord",
+    "Gucci",
+    "A$AP",
+    "Yarng",
+    "Jung",
+    "Yong",
+    "Trill",
+    "Big",
+    "Too",
+    "Killer",
+]
+
+suffix = [
+    "Baby",
+    "Stain",
+    "Skidmark",
+    "Child",
+    "Victim",
+    "Dookie",
+    "Man",
+    "Mane",
+    "Toddler",
+    "Fetus",
+    "Toilet",
+    "Gardener",
+    "Infant",
+    "Napsack",
+    "Taint",
+    "Scrote",
+    "Flapjack",
+    "Elrond",
+    "Pop Pop",
+    "Grandma",
+    "Screedle",
+    "Grinch",
+    "Skittletooth",
+    "Scribbleface",
+    "Coma",
+    "Folk",
+    "Scrub",
+    "Twat",
+    "Bitch",
+    "Turd",
+    "Splat",
+    "Jizz",
+    "Triplet",
+    "Nasty",
+    "Soundcloud",
+    "Facetat",
+    "Accountant",
+    "Baby",
+    "Merkin",
+    "Skreep",
+    "Fella",
+    "Pube",
+    "Gandalf",
+    "Midget",
+    "Charles",
+    "Jesus",
+    "Bastard",
+    "Generic",
+    "Interchangeable",
+    "Tweet",
+    "Tiktok",
+    "Earwax",
+    "Discharge",
+    "Weakling",
+    "Lannister",
+    "Abomination",
+    "Stem Cell",
+    "Stillborn",
+    "Creep Creep",
+    "Failure",
+    "Dolla",
+    "Tard",
+    "Dropout",
+    "Herpes",
+    "Xanax Reference",
+    "Cantspell",
+    "Trope",
+    "Meme",
+    "Dipshit",
+]
+
+brand = [
+    "Gucci",
+    "G.E.D",
+    "Blunts",
+    "40 Oz",
+    "Prada",
+    "Mercedes",
+    "Fellatio",
+    "Sam's Choice",
+    "Kmart",
+    "Hilfiger",
+    "Versace",
+    "Goodwill",
+    "Ferrari",
+    "Vuitton",
+    "Porsche",
+    "Cartier",
+    "Dior",
+    "Triplet",
+    "Maybach",
+    "Killa",
+    "Twitter",
+    "Pfizer",
+    "Hasbro",
+    "Milton Bradley",
+    "Mattel",
+    "Hooker",
+]
+
+headline = [
+    "Squashes Beef With",
+    "Starts Beef With",
+    "Eats Beef With",
+    "Slaps",
+    "Disses",
+    "Collaborates With",
+    "Falls In Love With",
+    "Publicly Fondles",
+    "Performs Live With",
+    "Hits #1 With"
+]
+
+headline2 = [
+    "On Latest Single",
+    "On Controversial New Single",
+    "On To Newest Hit Single",
+    "On Latest Track",
+]
+
+def rando():
+    num = random.randint(1,11)
+    if num <= 5:
+        name = f'{random.choice(prefix)} {random.choice(suffix)}'
+    else:
+        name = f'{random.choice(prefix)} {random.choice(suffix)} the {random.choice(suffix)}'
+    return(name)
+
+def brandname():
+    brandname = random.choice(brand)
+    return(brandname)
+
+def rappers():
+    h1 = random.choice(headline)
+    h2 = random.choice(headline2)
+    name = f'{random.choice(prefix)} {random.choice(suffix)}'
+    print(f'{name} {h1} {rando()} {h2}, \'{brandname()} {brandname()}\'\n')
+
+print('\n')
+for i in range(4):
+    rappers()
+ 
